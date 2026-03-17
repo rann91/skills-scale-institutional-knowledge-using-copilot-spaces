@@ -14,11 +14,28 @@ Applies to all cross-functional projects that deliver product features, services
 - Psychological safety: encourage feedback and learning.
 
 ## Core Roles
-- Project Manager (PM): coordinates delivery, schedules, risk, communications.
-- Product Manager (PdM): defines outcomes, prioritizes backlog, and measures success.
-- Developers: implement features, collaborate on design and testability.
-- QA/Testing: validate quality and acceptance criteria.
-- Stakeholders: provide inputs and approvals.
+
+### Lead Roles
+- **Project Manager (PM)**: Coordinates delivery, schedules, risk, communications. Owns project timeline and stakeholder alignment.
+- **Product Manager (PdM)**: Defines outcomes, prioritizes backlog, measures success. Owns product vision and customer value.
+
+### Delivery Roles
+- **Developers**: Implement features, collaborate on design and testability.
+- **Design Lead**: Owns user experience, manages design deliverables, collaborates with PM and Developers.
+- **QA/Testing**: Validates quality and acceptance criteria.
+- **QA Automation Engineer**: Develops and maintains automation scripts, ensures regression coverage.
+
+### Infrastructure & Support Roles
+- **DevOps/SRE**: Manages deployment pipelines, infrastructure reliability, and monitoring.
+- **Business Analyst**: Translates business requirements into actionable artifacts, supports discovery.
+
+### External Contributors
+- **External Partners/Vendors**: Provide specialist input or deliver components per contract scope.
+
+### Stakeholders
+- Provide inputs, approvals, and strategic direction.
+
+---
 
 ## Key Artifacts
 - Project Charter / One-pager
@@ -26,21 +43,35 @@ Applies to all cross-functional projects that deliver product features, services
 - Sprint/Iteration Backlog
 - Acceptance Criteria & Definition of Done
 - Risk Register
+- Cross-functional checklists (release, kickoff, handoff, QA, incident response)
 - Retrospective notes and action items
 
 ## Lifecycle (high-level)
-1. Initiation: problem statement, stakeholders, high-level timeline.
-2. Planning: scope, resources, milestones, dependencies.
-3. Execution: build, test, review, iterate.
-4. Release: deploy, verify, announce.
-5. Close & Retrospective: capture learnings and next steps.
+1. **Initiation**: Problem statement, stakeholders, high-level timeline.
+2. **Planning**: Scope, resources, milestones, dependencies, roles clarified.
+3. **Execution**: Build, test, review, iterate with cross-functional coordination.
+4. **Release**: Deploy, verify, announce with all role responsibilities confirmed.
+5. **Close & Retrospective**: Capture learnings and next steps.
 
 ## Communication Cadence
-- Weekly sync between PM + PdM
-- Twice-weekly standups for delivery team (or as agreed)
-- Monthly stakeholder updates
-- Ad-hoc escalations as needed
+- **Weekly PM/PdM Sync**: Alignment on priorities, risks, progress.
+- **Twice-weekly Standups**: Delivery team (Engineering, Design, QA, DevOps).
+- **Monthly Stakeholder Updates**: Status, milestones, business impact.
+- **Ad-hoc Escalations**: Risk, blockers, critical decisions as needed.
+
+## Cross-Functional Handoff Responsibilities
+
+Each phase transition requires explicit handoff and sign-off from relevant roles:
+
+| Phase Transition | Owner | Sign-offs Required |
+|---|---|---|
+| Design → Development | Design Lead + PM | Developers, Technical Lead |
+| Development → QA | Developers + QA Automation Engineer | QA/Testing, PM |
+| QA → Release | QA/Testing + DevOps/SRE | Project Manager |
+| Release → Post-Launch | DevOps/SRE + PM | Stakeholders, Product Manager |
 
 ## How to use these docs
 - Keep the Project Charter updated in the project repo.
-- Add process-specific docs into `.copilot/` if you want Copilot Spaces to use them as context.
+- Add process-specific docs into `docs/` for easy reference.
+- Use cross-functional checklists to standardize handoffs and reduce ambiguity.
+- Reference role definitions to clarify responsibilities at each project phase.
